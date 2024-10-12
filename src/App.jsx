@@ -1,4 +1,5 @@
-import Swal from "sweetalert2";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 // Array of compliments
 const compliments = [
@@ -23,15 +24,19 @@ function App() {
     const randomCompliment =
       compliments[Math.floor(Math.random() * compliments.length)];
 
-    // Display the compliment using SweetAlert
-    Swal.fire({
-      title: randomCompliment,
-      icon: "success",
-      confirmButtonText: "Love You! 💖",
-      customClass: {
-        title: "text-pink-600",
-        text: "text-gray-800",
-        confirmButton: "bg-pink-500 hover:bg-pink-600 text-white font-semibold",
+    toast.success(randomCompliment, {
+      position: "top-center",
+      autoClose: 3000,
+      hideProgressBar: true,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      style: {
+        backgroundColor: "#fff",
+        color: "#333",
+        fontWeight: "bold",
+        border: "2px solid #ff69b4", 
+        borderRadius: "10px",
       },
     });
   };
@@ -48,6 +53,8 @@ function App() {
       >
         Get Compliment
       </button>
+
+      <ToastContainer />
     </div>
   );
 }
