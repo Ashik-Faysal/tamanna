@@ -32,13 +32,15 @@ function App() {
       pauseOnHover: true,
       draggable: true,
       style: {
-        backgroundColor: "#fff",
-        color: "#333",
+        background: "linear-gradient(135deg, #ff7eb3, #ff65a3)", // Gradient background
+        color: "#ffffff", // White text
         fontWeight: "bold",
-        border: "2px solid #ff69b4", 
+        border: "2px solid #ff3e8e", // Darker pink border
         borderRadius: "10px",
+        boxShadow: "0 4px 20px rgba(0, 0, 0, 0.2)", // Shadow effect
       },
     });
+
   };
 
   return (
